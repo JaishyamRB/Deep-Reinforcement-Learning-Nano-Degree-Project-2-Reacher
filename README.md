@@ -9,8 +9,8 @@ The observation space consists of 33 variables corresponding to position, rotati
 Each action is a vector with four numbers, corresponding to torque applicable to two joints.
 Every entry in the action vector is a number between -1 and 1.
 The task is episodic, and in order to solve the environment, an agent must get an average score of +30 over 100 consecutive episodes.
-Here are the Unity details of the environment
-"""
+Here are the Unity details of the environment:
+```
 Unity brain name: ReacherBrain
         Number of Visual Observations (per agent): 0
         Vector Observation space type: continuous
@@ -19,7 +19,7 @@ Unity brain name: ReacherBrain
         Vector Action space type: continuous
         Vector Action space size (per agent): 4
         Vector Action descriptions: , , , 
-"""
+```
 ## Getting Started
 
 Setup the dependencies as described [here](https://github.com/udacity/deep-reinforcement-learning/blob/master/README.md).
