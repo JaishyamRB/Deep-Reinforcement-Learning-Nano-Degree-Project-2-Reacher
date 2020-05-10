@@ -6,9 +6,10 @@ Deep Deterministic Policy Gradients algorithm is used in this project because of
 The DDPG algorithm is implemented in the [Solution.ipynb](Solution.ipynb) file. 
 Learning of continuous actions requires an actor (`Actor` class) and a critic (`Critic` class) model.
 The actor model learns to predict an action vector while the critic model learns Q values for state-action pairs.
+The critic models servers as a baseline for the actor model to act upon.
 DDPG uses experience replay (`Replay` class) to sample batches of uncorrelated experiences to train on. 
 It also distinguishes between local and target models for both actor and critic, similar to fixed Q-targets and double DQN technique.
-Online models are updated by minimizing loses while target models are updated through soft update, 
+Local models are updated by minimizing loses while target models are updated through soft update, 
 i.e. local model parameters values are partially transferred to target models. 
 This helps to avoid overestimation of Q-values and makes the training more stable.
 
@@ -17,11 +18,11 @@ The `act` method generates an action for the given state with the online actor m
 The `learn` method implements updates to the models and has the following flow:
 
 1. A batch of experiences is sampled from the replay buffer.
-2. Update online critic model
+2. Update local critic model
     1. Predict actions for the next states with the target actor model
     2. Compute Q-values for the next states and actions with the target critic model
     3. Compute target Q-values for the current states and actions using the Bellman equation
-    4. Compute Q values for the current states and actions with the online critic model
+    4. Compute Q values for the current states and actions with the local critic model
     5. Use the target and local Q-values to compute the loss
     6. Minimize the loss for the local critic model
 3. Update online actor model
