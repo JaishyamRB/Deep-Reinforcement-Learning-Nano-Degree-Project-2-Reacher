@@ -22,9 +22,9 @@ Unity brain name: ReacherBrain
 ```
 ## Getting Started
 
-Setup the dependencies as described [here](https://github.com/udacity/deep-reinforcement-learning/blob/master/README.md).
+1. Before getting into the project there are certain dependencies to be met. Make sure you have [python 3.6]( https://www.python.org/downloads/release/python-3610/) installed and virtual environment.
 
-Download the environment from one of the links below.
+2. Download the environment from one of the links below.
 You need only select the environment that matches your operating system:
 
 - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip)
@@ -32,7 +32,12 @@ You need only select the environment that matches your operating system:
 - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86.zip)
 - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)
 
-Clone the repository and unpack the environment file in the project folder.
+3. Download or clone this repo and run these commands in your terminal:
+
+```
+pip install requirement.txt
+pip -q install ./python
+```
 
 ## Instructions
 
