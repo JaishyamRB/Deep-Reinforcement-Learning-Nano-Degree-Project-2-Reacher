@@ -35,7 +35,7 @@ You need only select the environment that matches your operating system:
 3. Download or clone this repo and run these commands in your terminal:
 
 ```
-pip install requirement.txt
+pip install requirements.txt
 pip -q install ./python
 ```
 
